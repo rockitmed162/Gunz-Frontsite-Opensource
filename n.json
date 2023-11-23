@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appService_WebApplication1220231013003549_name": {
+      "type": "string"
+    },
+    "appServicePlan_WebApplication1220231013003549Plan_location": {
+      "type": "string"
+    },
+    "appServicePlan_WebApplication1220231013003549Plan_name": {
+      "type": "string"
+    },
+    "currentStack": {
+      "type": "string"
+    },
+    "appServicePlan_WebApplication1220231013003549Plan_skuName": {
+      "type": "string"
+    },
+    "appServicePlan_WebApplication1220231013003549Plan_skuTier": {
+      "type": "string"
+    },
+    "appServicePlan_WebApplication1220231013003549Plan_skuFamily": {
+      "type": "string"
+    },
+    "appServicePlan_WebApplication1220231013003549Plan_skuSize": {
+      "type": "string"
+    },
+    "appServicePlan_WebApplication1220231013003549Plan_workerSizeId": {
+      "type": "int"
+    }
+  },
+  "resources": [
+    {
+      "location": "[parameters('appServicePlan_WebApplication1220231013003549Plan_location')]",
+      "name": "[parameters('appService_WebApplication1220231013003549_name')]",
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2018-02-01",
+      "tags": {
+        "[concat('hidden-related:', resourceId('Microsoft.Web/serverFarms', parameters('appServicePlan_WebApplication1220231013003549Plan_name')))]": "empty"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverFarms', parameters('appServicePlan_WebApplication1220231013003549Plan_name'))]"
+      ],
+      "kind": "app",
+      "properties": {
+        "name": "[parameters('appService_WebApplication1220231013003549_name')]",
+        "httpsOnly": true,
+        "reserved": false,
+        "serverFarmId": "[resourceId('Microsoft.Web/serverFarms', parameters('appServicePlan_WebApplication1220231013003549Plan_name'))]",
+        "siteConfig": {
+          "ftpsState": "FtpsOnly",
+          "metadata": [
+            {
+              "name": "CURRENT_STACK",
+              "value": "[parameters('currentStack')]"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "type": "SystemAssigned"
+      }
+    },
+    {
+      "location": "[parameters('appServicePlan_WebApplication1220231013003549Plan_location')]",
+      "name": "[parameters('appServicePlan_WebApplication1220231013003549Plan_name')]",
+      "type": "Microsoft.Web/serverFarms",
+      "apiVersion": "2018-02-01",
+      "kind": "",
+      "sku": {
+        "Name": "[parameters('appServicePlan_WebApplication1220231013003549Plan_skuName')]",
+        "Tier": "[parameters('appServicePlan_WebApplication1220231013003549Plan_skuTier')]"
+      },
+      "properties": {
+        "name": "[parameters('appServicePlan_WebApplication1220231013003549Plan_name')]",
+        "workerSize": "[parameters('appServicePlan_WebApplication1220231013003549Plan_workerSizeId')]",
+        "workerSizeId": "[parameters('appServicePlan_WebApplication1220231013003549Plan_workerSizeId')]",
+        "numberOfWorkers": "1",
+        "reserved": false
+      }
+    }
+  ]
+}

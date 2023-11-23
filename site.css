@@ -1,0 +1,186 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #003366;
+    width: 100%;
+}
+
+.maincontent{
+    display: flex;
+}
+    
+}
+.grivdiv > DIV {
+    margin: 1em 0;
+    /*width: 100%;*/
+    overflow: hidden;
+    background: #FFF;
+    color: #024457;
+    border-radius: 10px;
+    border: 1px solid #167F92;
+    display: table;
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+.grivdiv tr:nth-child(odd) {
+    background-color: #EAF3F3;
+}
+
+.grivdiv tr {
+    border: 1px solid #D9E4E6;
+}
+
+    .grivdiv tr th {
+        border: 1px solid #FFF;
+        background-color: #167F92;
+        color: #FFF;
+        padding: 1em;
+        display: table-cell;
+        text-align: center;
+        margin: .5em 1em;
+    }
+
+    .grivdiv tr td {
+        color: #024457 !important;
+        color: #FFF;
+        padding: 5px;
+        display: table-cell;
+        text-align: center;
+    }
+
+
+.GridPager:hover {
+    background-color: white !important;
+}
+
+.GridPager a,
+.GridPager span {
+    display: inline-block;
+    padding: 3px 9px;
+    margin: 4px auto;
+    border-radius: 3px;
+    border: solid 1px #08515f;
+    background: #167f92;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
+    font-size: .875em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgba(255,255,255, 1);
+    font-weight: 600;
+}
+
+.GridPager a {
+    background-color: #f5f5f5;
+    color: #167f92;
+    border: 1px solid #167f92;
+}
+
+.GridPager span {
+    background: #167f92;
+    box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8);
+    color: #f0f0f0;
+    text-shadow: 0px 0px 3px rgba(0,0,0, .5);
+    border: 1px solid #08515f;
+}
+
+.GridPager td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    background-color: #f2f2f2 !important;
+}
+
+.GridPager table tr td {
+    background-color: #EAF3F3 !important;
+}
+
+.Helloimg {
+    background-image: url("https://i.ibb.co/GTwC2h8/user-placeholder.png");
+    background-repeat: no-repeat;
+}
+.Hellowtf {
+    background-image: url("https://i.ibb.co/DrVfsnr/register-Background4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 75%;
+    height: 100%;
+    max-width: 77%;
+    max-height: 98%;
+}
+
+.AnexJuho {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+   
+}
+.NewsFlashBaby {
+    background-color:peru ;
+    border-radius: 1px;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
+    border: solid 1px #08515f;
+    width: 75%;
+    height: 100%;
+    max-width: 77%;
+    max-height: 98%;
+}
+.Anex1 {
+     
+    
+}
+.AnexJuhoimg {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banneranex5 {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.banneranex {
+    background-image: url("https://i.ibb.co/DrVfsnr/register-Background4.png");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: cover;
+
+    width: 100%;
+ 
+    height: 18vh;
+  
+}
+
+.gones {
+    position: absolute;
+    left: -9999px;
+}
+.banneranex2 {
+    background-image: url("https://i.ibb.co/qBrVRKS/clan-Header2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 18vh;
+    width: 2340px;
+}
+.banneranex3  {
+    background-image: url("https://i.ibb.co/qBrVRKS/clan-Header2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+.image-container {
+    display: flex;
+    height: 15vh;
+}

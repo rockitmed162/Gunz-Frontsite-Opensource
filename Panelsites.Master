@@ -1,0 +1,219 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Panelsites.Master.cs" Inherits="WebApplication12.Panelsites" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Gunz Development 2023</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" runat="server" media="screen" href="site.css" />
+
+    <style type="text/css">
+        .auto-style6 {
+            margin-left: 0px;
+            margin-top: 1px;
+        }
+    </style>
+
+    </head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/port.js" />
+                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/modernizr-2.8.3.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container AnexJuho">
+                <a class="navbar-brand" runat="server" href="Pages/Home.Aspx">Gunz Development 2023</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+    <li class="nav-item"><a class="nav-link" runat="server" href="Pages/Home.Aspx">Home</a></li>
+ <li class="nav-item"><a class="nav-link" runat="server" href="Pages/Panel/Panel.Aspx">Admin Panel</a></li>
+<li class="nav-item"><a class="nav-link" runat="server" href="/Pages/Panel/members.aspx?id=memberpanel">User Panel</a></li>;
+ <li class="nav-item"><a class="nav-link" runat="server" href="Pages/Register.Aspx">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+
+
+
+        
+
+        
+    <div class="image-container">
+                    
+         <div class="banneranex" visible="false"  >
+  </div> 
+     <div class="banneranex2" >
+     </div> 
+        
+  <div class="banneranex" visible="false" >
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div> 
+     </div>
+         
+         
+  
+      
+             <div class="AnexJuhoimg" style="height: 100vh; width: 98%; margin-top: 0px; color: #FFFFFF;">
+           
+
+          
+      
+  
+    
+                         
+
+    
+              
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+         <asp:Label ID="Label1" runat="server" CssClass="auto-style4" Text="UserID" Font-Bold="True" Font-Names="Verdana"></asp:Label>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+                       <asp:Label ID="Label2" runat="server" CssClass="auto-style5" Text="Password" Font-Bold="True" Font-Names="Verdana"></asp:Label>
+                 <br />
+           
+
+          
+      
+  
+    
+                         
+
+    
+              
+            <asp:TextBox ID="TextBox3" runat="server" HorizontalAlign="Justify" Height="29px" Width="83px" style="margin-top: 0px; margin-bottom: 0px; margin-left: 15px; padding-top: 0;" BackColor="#0099FF" BorderColor="#FFCC99" BorderStyle="Double" BorderWidth="1px" Font-Names="Verdana" Font-Bold="True" ForeColor="White" ></asp:TextBox>
+ 
+         <asp:TextBox ID="TextBox4" runat="server" HorizontalAlign="Justify" Width="81px"  Height="28px" style="margin-left: 12px" BackColor="#0099FF" BorderColor="#FFCC99" BorderStyle="Double" BorderWidth="1px" Font-Bold="True" Font-Names="Verdana" ForeColor="White" TextMode="Password"></asp:TextBox>
+       
+    <asp:Button ID="Button2" OnClick="ButtonLogin_Click" runat="server" Text="Login" HorizontalAlign="Left" style="margin-left: 4px; margin-top: 7px;" Width="86px" Height="33px" BackColor="#FF9900" BorderColor="White" BorderStyle="Groove" BorderWidth="1px" />
+                        
+    
+                 <asp:Button ID="Button8UNLOCK" OnClick="ButtonLogout_Click" runat="server" Text="Logout" HorizontalAlign="Left" Width="86px" Height="33px" BackColor="#FF9900" BorderColor="White" BorderStyle="Groove" BorderWidth="1px" CssClass="auto-style6" />
+                              
+   
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+       
+            </asp:ContentPlaceHolder>
+                                          
+
+    
+              
+                         
+     
+   </div> 
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+
+    </asp:PlaceHolder>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="auto-style8" Visible="False" DataKeyNames="CID" DataSourceID="dt">
+            <Columns>
+                <asp:BoundField DataField="CID" HeaderText="CID" InsertVisible="False" ReadOnly="True" SortExpression="CID" />
+                <asp:BoundField DataField="AID" HeaderText="AID" SortExpression="AID" />
+                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                <asp:BoundField DataField="CharNum" HeaderText="CharNum" SortExpression="CharNum" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="dt" runat="server" ConnectionString="<%$ ConnectionStrings:GunzDBConnectionString6 %>" SelectCommand="SELECT [CID], [AID], [Name], [CharNum] FROM [Character]" DeleteCommand="DELETE FROM [Character] WHERE [CID] = @CID" InsertCommand="INSERT INTO [Character] ([AID], [Name], [CharNum]) VALUES (@AID, @Name, @CharNum)" UpdateCommand="UPDATE [Character] SET [AID] = @AID, [Name] = @Name, [CharNum] = @CharNum WHERE [CID] = @CID">
+            <DeleteParameters>
+                <asp:Parameter Name="CID" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="AID" Type="Int32" />
+                <asp:Parameter Name="Name" Type="String" />
+                <asp:Parameter Name="CharNum" Type="Int16" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="AID" Type="Int32" />
+                <asp:Parameter Name="Name" Type="String" />
+                <asp:Parameter Name="CharNum" Type="Int16" />
+                <asp:Parameter Name="CID" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+                <asp:GridView ID="GridView5" runat="server" CssClass="auto-style7" Visible="False" DataSourceID="itemdb" style="z-index: 1" DataKeyNames="CIID" AutoGenerateColumns="False">
+            <Columns>
+                <asp:BoundField DataField="CIID" HeaderText="CIID" InsertVisible="False" ReadOnly="True" SortExpression="CIID" />
+                <asp:BoundField DataField="CID" HeaderText="CID" SortExpression="CID" />
+                <asp:BoundField DataField="ItemID" HeaderText="ItemID" SortExpression="ItemID" />
+                <asp:BoundField DataField="RegDate" HeaderText="RegDate" SortExpression="RegDate" />
+            </Columns>
+</asp:GridView>
+            <asp:SqlDataSource ID="itemdb" runat="server" ConnectionString="<%$ ConnectionStrings:itemdb %>" ProviderName="<%$ ConnectionStrings:itemdb.ProviderName %>" SelectCommand="SELECT [CIID], [CID], [ItemID], [RegDate] FROM [CharacterItem]"></asp:SqlDataSource>
+            <asp:GridView ID="GridView3" runat="server" CssClass="auto-style7" Visible="False" DataSourceID="clanrs" style="z-index: 1" DataKeyNames="MasterCID" AutoGenerateColumns="False">
+                <Columns>
+                    <asp:BoundField DataField="CLID" HeaderText="CLID" InsertVisible="False" ReadOnly="True" SortExpression="CLID" />
+                    <asp:BoundField DataField="MasterCID" HeaderText="MasterCID" SortExpression="MasterCID" />
+                    <asp:BoundField DataField="NAME" HeaderText="NAME" SortExpression="NAME" />
+                </Columns>
+    </asp:GridView>
+    <asp:SqlDataSource ID="clanrs" runat="server" ConnectionString="<%$ ConnectionStrings:GunzDBConnectionString6 %>" SelectCommand="SELECT MasterCID, Name FROM Clan WHERE (MasterCID = @MasterCID)">
+           <DeleteParameters>
+         <asp:Parameter Name="CLID" Type="Int32" />
+                        <asp:Parameter Name="MasterCID" Type="Int32" />
+     </DeleteParameters>
+     <InsertParameters>
+         
+         <asp:Parameter Name="CLID" Type="Int32" DefaultValue="@CLID" />
+ 
+         <asp:Parameter Name="MasterCID" Type="Int32" />
+         <asp:Parameter Name="CLID" DefaultValue="@CLID" />
+ 
+     </InsertParameters>
+     <UpdateParameters>
+         <asp:Parameter Name="MasterCID" Type="Int32" />
+         <asp:Parameter Name="CLID" Type="Int32" />
+ 
+     </UpdateParameters>
+        <SelectParameters>
+            <asp:ControlParameter ControlID="GridView3" DefaultValue="@MasterCID" Direction="ReturnValue" Name="Select" PropertyName="SelectedValue" />
+         
+            <asp:Parameter DefaultValue="@MasterCID" Name="MasterCID" Type="Int32" Direction="ReturnValue" />
+            <asp:Parameter DefaultValue="@CLID" Name="CLID" Direction="ReturnValue" />
+         
+            <asp:SessionParameter DbType="String" DefaultValue="CName" Direction="ReturnValue" Name="CNAME" SessionField="CName" Type="Int32" />
+         
+        </SelectParameters>
+        <UpdateParameters>
+ 
+        </UpdateParameters>
+    </asp:SqlDataSource>
+
+
+    </form>
+    </body>
+</html>

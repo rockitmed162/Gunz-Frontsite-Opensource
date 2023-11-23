@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Member.Master.cs" Inherits="WebApplication12.MemberMaster" %>
+
+<%@ Register assembly="DTIControls" namespace="JqueryUIControls" tagprefix="cc1" %>
+<%@ Register assembly="EO.Web" namespace="EO.Web" tagprefix="eo" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Gunz Development 2023</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" runat="server" media="screen" href="site.css" />
+
+    <style type="text/css">
+        .auto-style6 {
+            margin-left: 0px;
+            margin-top: 1px;
+            margin-right: 43;
+        }
+        .auto-style7 {
+            margin-left: 0px;
+            height: 2px;
+        }
+        </style>
+
+    </head>
+<body style="height: 316px">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/port.js" />
+                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/modernizr-2.8.3.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container AnexJuho">
+                <a class="navbar-brand" runat="server" href="Pages/Home.Aspx">Gunz Development 2023</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                     <li class="nav-item"><a class="nav-link" runat="server" href="Pages/Home.Aspx">Home</a></li>
+ <li class="nav-item"><a class="nav-link" runat="server" href="Pages/Panel/Panel.Aspx">Admin Panel</a></li>
+<li class="nav-item"><a class="nav-link" runat="server" href="/Pages/Panel/members.aspx?id=memberpanel">User Panel</a></li>;
+ <li class="nav-item"><a class="nav-link" runat="server" href="Pages/Register.Aspx">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+
+        
+    <div class="image-container">
+                    
+         <div class="banneranex" visible="false"  >
+  </div> 
+     <div class="banneranex2" >
+     </div> 
+        
+  <div class="banneranex" visible="false" >
+  </div> 
+     </div>
+         
+         
+  
+      
+             <div class="AnexJuhoimg" style="height: 1px; width: 98%; margin-top: 0px; color: #FFFFFF;">
+           
+
+          
+      
+  
+                   
+                         
+
+    
+              
+    
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+     <!--                    <asp:PlaceHolder ID="PlaceHolder1" runat="server"> 
+               
+<asp:GridView ID="GridView3" runat="server">
+</asp:GridView>
+
+ 
+ 
+          </asp:PlaceHolder>-->
+            </asp:ContentPlaceHolder>
+                                          
+
+    
+                                                                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:clantab %>"
+    SelectCommand="SELECT MasterCID, CLID, Name, Level FROM Clan(NOLOCK) WHERE (DeleteFlag = 0) AND (MasterCID = @MasterCID)">
+    <SelectParameters>
+        <asp:SessionParameter Name="MasterCID" DefaultValue="@MasterCID" SessionField="CLANMASTERCID" Direction="ReturnValue"/>
+    </SelectParameters>
+</asp:SqlDataSource>
+                                   <asp:Label ID="Label2" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+           
+                         
+     
+   </div> 
+
+                               <div class="auto-style7"> <asp:Label ID="Label1" runat="server" style="z-index: 1; position: absolute; top: 331px; left: 1073px; height: 23px; width: 77px; " BackColor="White" BorderColor="White" BorderStyle="Double" BorderWidth="1px" Font-Bold="True" Font-Names="Verdana" Font-Size="Small" CssClass="GridPager" ForeColor="Black" ViewStateMode="Enabled" Visible="False">Welcome:</asp:Label>
+</div>
+                 
+  
+                                   <eo:Floater ID="Floater1" runat="server" SelectedIndexChanged="Flyout" CssClass="auto-style8" Height="35px" OnDataBinding="Button88_Click" style="z-index: 1; margin-bottom: 0;" Width="10%" BackColor="Black" BorderColor="White" BorderStyle="Ridge" BorderWidth="3px" ForeColor="White" Font-Bold="True">
+                                       <asp:Button ID="Button88" runat="server" BackColor="#FF9900" BorderColor="White" BorderStyle="Groove" BorderWidth="1px" CssClass="auto-style6" Height="100%" HorizontalAlign="Left" OnClick="Button88_Click" Text="Logout" Width="100%" />
+        </eo:Floater>
+                       
+                           <asp:Label ID="Label3" runat="server" style="z-index: 1; position: absolute; top: 285px; height: 30px; width: 238px; right: 1122px;" Font-Bold="True" Font-Names="Verdana" Font-Size="Medium" CssClass="input-group-text" ForeColor="#003366" ViewStateMode="Enabled"></asp:Label>
+    </form>
+   
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+
+    </asp:PlaceHolder>
+</body>
+</html>
