@@ -41,28 +41,28 @@ The Connection to Established with SQL And GunZ Database.
 Step1:
 -
 Start New Project:
-- 
 --
+-
 Select ASP.NET Web Application (.Net Framework) v 4.7.2 - v 4.8.1
 --
+-
 this is the platform and rest is up to your skill and use of the startup files im providing for open free source..
+---
 -
---
 Open member.aspx / Home.aspx / register.aspx / panelsites.master files
--
 --
-
+---
 access them on Design View, Find and Modify the SqlDatasource Objects with your own SQLconnection settings.
 -
---
-
+---
+-
 after this you retrieve the Connectionstrings what you need to modify and add to code-behind pages.
 Member.aspx.cs, home.aspx.cs , register.aspx.cs, panelsites.master.cs files are c#.
 then replace the connectionstring to yours in those files.
 -------------------------------------------------------------------------------
--
-After this you the source is available and free for you to continue and use,this is the startup free open source for you to free to use.
 
+After this you the source is available and free for you to continue and use,this is the startup free open source for you to free to use.
+-
 --------------------
 
 Download the Databases:
