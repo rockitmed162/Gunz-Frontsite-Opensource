@@ -54,3 +54,8 @@ none of these changes are really neccessary or new or different. they already ex
 thats all.
 ---
 GunzWeb Database is Standalone its to control the Frontpage News/updates/download/custom Objects , you can easily fill them with text or what you want to add.
+-
+the databases have been taken directly from use as a copy added here, so they already contain the changes I mentioned that are supported by the source code of the website. but contains the server and some ready-made values, e.g. account and login account and a pre-created character and clan. take these things into account if you decide to use the GunzDB database, while the Gunzweb database is a mandatory add-on for the site's functionality.
+<---
+-Do not mix the Source with other coding languages, it is pure html/C# / stylesheet on windows blazer webforms. It means don't mix it with PHP, Java, python, or any   other code languages, or the source code will lose its edge.
+------------------------------------------------------------------------------------------------------------
