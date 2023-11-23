@@ -39,6 +39,15 @@ ODBC32-bit
 The Connection to Established with SQL And GunZ Database.
 -----------------------------------------------------------
 Step1:
+-
+Start New Project:
+- 
+--
+Select ASP.NET Web Application (.Net Framework) v 4.7.2 - v 4.8.1
+--
+this is the platform and rest is up to your skill and use of the startup files im providing for open free source..
+-
+--
 Open member.aspx / Home.aspx / register.aspx / panelsites.master files
 -
 --
