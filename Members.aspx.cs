@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.UI;
 using DropDownList = System.Web.UI.WebControls.DropDownList;
 using System.Web.UI.WebControls;
+using Label = System.Web.UI.WebControls.Label;
 using Page = System.Web.UI.Page;
 using ServiceStack;
 using Nest;
@@ -29,44 +30,46 @@ using Xunit;
 using System.Web.Http.Routing;
 using Microsoft.AspNetCore.Http;
 using ServiceStack.Text;
+using System.Diagnostics;
 
-namespace WebApplication12
-{
-	public partial class _Default2 : Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
-			if (Session["UserMember"] == null)
-			{
+namespace WebApplication12 {
+	public partial class _Default2 : Page {
+		public void DisplayErrorMessage(string errorMessage) {
+			// Find the Label control in your Master Page
+			Label errorLabel = (Label)FindControl("Errorlabel");
+			// Replace "Errorlabel" with the ID of your label control
+			//Create custom Error Label Element for this, Remember to set it hidden, this snippet ensures
+			// that the error label will be visible.
+			if (errorLabel != null) {
+				errorLabel.Text = errorMessage;
+				errorLabel.Visible = true; // Make the label visible to display the error message
+			}
+		}
+		protected void Page_Load(object sender, EventArgs e) {
+			if (Session["UGRAD"] == null) {
 				Response.Redirect("https://localhost:44396/Pages/Home.aspx");
 			}
-			else
-			{
+			else {
 				//test delete after
 				//welcome user
 				Label3.Text = Label4.Text + Session["UserMember"] + Labelorder66.Text;
 			}
 		}
-		protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-		{
+		protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e) {
 			GridView1.PageIndex = e.NewPageIndex;
 			BindCashData(); //  cashmethod
 		}
-		private void BindCashData()
-		{
+		private void BindCashData() {
 			string connectionString = "Data Source=jop\\mssqlserver02;Initial Catalog=GunzDB;Persist Security Info=True;User ID=sa;Password=Asdasd12!";
 
-			using (SqlConnection con = new SqlConnection(connectionString))
-			{
+			using (SqlConnection con = new SqlConnection(connectionString)) {
 				con.Open();
 
 				// Fill User's Cash Bank. cash fix later
-				using (SqlCommand cmd = new SqlCommand("SELECT Cash FROM Account WHERE UserID = @UserID", con))
-				{
+				using (SqlCommand cmd = new SqlCommand("SELECT Cash FROM Account WHERE UserID = @UserID", con)) {
 					cmd.Parameters.AddWithValue("@UserID", Session["UserMember"]);
 
-					using (SqlDataAdapter ada = new SqlDataAdapter(cmd))
-					{
+					using (SqlDataAdapter ada = new SqlDataAdapter(cmd)) {
 						DataSet cashtable = new DataSet();
 						ada.Fill(cashtable);
 
@@ -77,72 +80,70 @@ namespace WebApplication12
 				}
 			}
 		}
-		protected void ChangeName_UserPanelCLick(object sender, EventArgs e)
-		{
+		protected void ChangeName_UserPanelCLick(object sender, EventArgs e) {
 			string connectionString = "Data Source=jop\\mssqlserver02;Initial Catalog=GunzDB;Persist Security Info=True;User ID=sa;Password=Asdasd12!";
 
-			using (SqlConnection con = new SqlConnection(connectionString))
-			{
+			using (SqlConnection con = new SqlConnection(connectionString)) {
 				con.Open();
 
 				// the Dataset Entry
-				using (SqlCommand cmd = new SqlCommand("SELECT * FROM Character WHERE AID = @AID", con))
-				{
+				using (SqlCommand cmd = new SqlCommand("SELECT * FROM Character WHERE AID = @AID", con)) {
 					cmd.Parameters.AddWithValue("@AID", Session["AID"]);
 
 					SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 					DataSet ds = new DataSet();
 					adapter.Fill(ds, "Character");
 
-					if (ds.Tables.Contains("Character") && ds.Tables["Character"].Rows.Count > 0)
-					{
-						if (ds.Tables["Character"].Rows[0]["AID"].ToString() == Session["AID"].ToString())
-						{
+					if (ds.Tables.Contains("Character") && ds.Tables["Character"].Rows.Count > 0) {
+						if (ds.Tables["Character"].Rows[0]["AID"].ToString() == Session["AID"].ToString()) {
 							// Creates SQL-Command for the Update
-							using (SqlCommand sql = new SqlCommand("UPDATE TOP (1) Character SET Name = @NewName WHERE (AID = @AID) AND (Name = @OldName)", con))
-							{
+							using (SqlCommand sql = new SqlCommand("UPDATE TOP (1) Character SET Name = @NewName WHERE (AID = @AID) AND (Name = @OldName)", con)) {
 								sql.Parameters.AddWithValue("@NewName", TextBox675.Text);
 								sql.Parameters.AddWithValue("@OldName", TextBox679.Text);
 								sql.Parameters.AddWithValue("@AID", Session["AID"]);
 
-								try
-								{
+								try {
 									int rowsAffected = sql.ExecuteNonQuery();
 
-									if (rowsAffected > 0)
-									{
-										MessageBox.Show(string.Format("Name was changed successfully from '{0}' to '{1}'", TextBox679.Text, TextBox675.Text));
+									if (rowsAffected > 0) {
+									MessageBox.Show(string.Format("Name was changed successfully from '{0}' to '{1}'", TextBox679.Text, TextBox675.Text));
 										string newUrl = "Members.aspx?id=" + Session["UserMember"];
 										Response.Redirect("https://localhost:44396/Pages/Panel/" + newUrl);
-
-									}
-									else
-									{
-										MessageBox.Show("Name was not changed!");
 										return;
 									}
+									else {
+										MessageBox.Show("Name was not changed!");
+										return;
+									}				
 								}
-								catch (Exception ex)
-								{
+								catch (Exception ex) {
+
 									// Expection Handlers
 									MessageBox.Show("An error occurred: " + ex.Message);
-
+									return;
+									/* to use your unique error message, uncomment line beneath this comment.*/
+									//  DisplayErrorMessage("This is the error label, type your error message here.");
 								}
 							}
 						}
-						else
-						{
-							//	MessageBox.Show("This is not your character!");
-						}
-					}
-					else
-					{
-						//MessageBox.Show("Character doesn't exist!");
-					}
-				}
-			}
-		}
-		protected void ChangePassword_UserPanelCLicks(object sender, EventArgs e)
+                    }
+                }
+            }
+        }
+        // finally {
+        // Expection Handlers
+        // MessageBox.Show("shithappens..: " + ex.Message);*/
+        /*	else {
+                DisplayErrorMessage("Name of the character you tried to change is not your character.");
+                //	MessageBox.Show("This is not your character!");
+            }
+        }
+        else {
+            DisplayErrorMessage("Name of the character you tried to change doesn't exist!");
+            //MessageBox.Show("Character doesn't exist!");
+
+        }*/
+        protected void ChangePassword_UserPanelCLicks(object sender, EventArgs e)
 		{
 			string connectionString = "Data Source=jop\\mssqlserver02;Initial Catalog=GunzDB;Persist Security Info=True;User ID=sa;Password=Asdasd12!";
 
@@ -166,7 +167,7 @@ namespace WebApplication12
 					{
 						if (ds.Tables["Login"].Rows[0]["AID"].ToString() == Session["AID"].ToString())
 						{
-							using (SqlCommand Cmdpwold = new SqlCommand("UPDATE TOP (1) Login Set Password = @PasswordNew Where (AID = @AID) AND (Password = @Password)", con))
+	using (SqlCommand Cmdpwold = new SqlCommand("UPDATE TOP (1) Login Set Password = @PasswordNew Where (AID = @AID) AND (Password = @Password)", con))
 							{
 
 								Cmdpwold.Parameters.AddWithValue("@Password", TextBox667.Text);
@@ -181,6 +182,7 @@ namespace WebApplication12
 										MessageBox.Show(string.Format("Password was changed successfully from '{0}' to '{1}'", TextBox667.Text, TextBox672.Text));
 										string newUrl = "Members.aspx?id=" + Session["UserMember"];
 										Response.Redirect("https://localhost:44396/Pages/Panel/" + newUrl);
+										return;
 
 									}
 									else
@@ -259,11 +261,13 @@ namespace WebApplication12
 										MessageBox.Show(string.Format("Item '{0}' Sent to '{1}' Item Costed '{2}'", itemid.Text, CharID.Text, price.Text));
 										string newUrl = "Members.aspx?id=" + Session["UserMember"];
 										Response.Redirect("https://localhost:44396/Pages/Panel/" + newUrl);
+										return;
 									}
 									else
 									{
 										transaction.Rollback();  // Rollback the transaction if any operation fails
 										MessageBox.Show("Item was not Sent");
+										return;
 									}
 								}
 							}
@@ -273,6 +277,7 @@ namespace WebApplication12
 					{
 						transaction.Rollback();  // Rollback the transaction if an exception occurs
 						MessageBox.Show("An error occurred: " + ex.Message);
+						return;
 					}
 				}
 			}
