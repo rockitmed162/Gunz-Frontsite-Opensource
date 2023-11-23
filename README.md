@@ -63,6 +63,7 @@ GunzDB (whats different?)
 -
 
 In Account table you have a extra field "password" 
+
 -
 
 In Login You have extra field "UGradeID"
@@ -72,6 +73,7 @@ In Login You have extra field "UGradeID"
 in Character You hae extra fields "UGradeID" , "UserID" , "Password" , "OldName"
 none of these changes are really neccessary or new or different. they already exists and are used on gunz, i just added those same values available on other tables.
 thats all.
+
 ---
 GunzWeb Database is Standalone its to control the Frontpage News/updates/download/custom Objects , you can easily fill them with text or what you want to add.
 -
