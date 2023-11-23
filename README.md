@@ -11,7 +11,7 @@ No Configure files are part of it, it is opensource so you have to have some ski
 Pre-Requirement to Install to open and edit the source:
 --------------------------------------------------------
 
-Visual Studio 2022 / .Net v3.5 - v8.0 installed 
+Visual Studio 2022 / .Net v3.5 - v8.0 installed  with C# support ideally.
 -
 Microsoft.EntityFrameWork.SqlServer v3.1.32 to v8.0
 -
