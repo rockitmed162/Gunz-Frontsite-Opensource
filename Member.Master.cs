@@ -1,4 +1,4 @@
-﻿using Intuit.Ipp.Core.Configuration;
+using Intuit.Ipp.Core.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -29,18 +29,11 @@ namespace WebApplication12 {
                 Label3.Text = Label1.Text + userId;
             }
         }
-            protected void Button88_Click(object sender, EventArgs e) {
-                Session.Abandon();
-                Session.Clear();
-                Response.Cookies.Clear();
-                Response.Redirect("https://localhost:44396/Pages/Home.aspx");
-
-            }
-
-        protected void Flyout_SelectedIndexChanged(object sender, EventArgs e) {
-            string userId2 = Button88.Text as string;
-            Button88.Text = userId2;
-
+        protected void Button88_Click(object sender, EventArgs e) {
+            Session.Abandon();
+            Session.Clear();
+            Response.Cookies.Clear();
+            Response.Redirect("https://localhost:44396/Pages/Home.aspx");
         }
     }
 }
