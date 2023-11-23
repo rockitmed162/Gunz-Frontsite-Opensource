@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Member.Master" AutoEventWireup="true" CodeBehind="Members.aspx.cs" Inherits="WebApplication12._Default2" %>
+<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Member.Master" AutoEventWireup="true" CodeBehind="Members.aspx.cs" Inherits="WebApplication12._Default2" %>
 
 
 
@@ -150,6 +150,7 @@
                                                                <asp:ListItem>Bounty</asp:ListItem>
                                                                <asp:ListItem>Damage</asp:ListItem>
                                                            </asp:DropDownList>
+                             <asp:Label ID="errorlabel" runat="server" AssociatedControlID="Label3" CssClass="GridPager" Font-Bold="True" Font-Names="Verdana" Font-Size="Medium" ForeColor="#FF3300" style="z-index: 1; left: 1060px; top: 215px; position: absolute; height: 21px; width: 149px" Text="Error:" Visible="False"></asp:Label>
                              </p>
                <asp:Label ID="Label11" runat="server" style="z-index: 1; position: absolute; top: 528px; left: 1077px; height: 74px; bottom: 65px; width: 199px;" Text="-  &quot; *Steal or Spend when buying item,  input other characters name to steal other character's bounties for fun.&quot;" BorderColor="#FF9900" BorderStyle="Solid" BorderWidth="0.3em" Font-Bold="True" Font-Names="Arial" Font-Size="0.7em" ForeColor="White" ToolTip="Enter Character's Name Who Buys The Item For You!" BackColor="#003366" CssClass="Badge"></asp:Label>
 
