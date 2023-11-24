@@ -16,18 +16,18 @@
     
      <p style="background-color: #000000; height: 100%; width: 102%; margin-left: 0px; margin-top: 0px; margin-bottom: 0px;">
                
-                             <asp:Label ID="Label3" runat="server" Font-Names="Verdana" Font-Size="Smaller" ForeColor="White" style="z-index: 1; position: absolute; top: 400px; left: 534px; width: 408px; height: 46px;" Text="Create an &nbsp;Account now and Register,&nbsp;&nbsp;&nbsp;No Verification Required!* 5 Letters For UserID and Password Requirement!" BackColor="#333333" BorderColor="Red" BorderStyle="Groove" BorderWidth="2px"></asp:Label>
+                             <asp:Label ID="InfoLabel3" runat="server" Font-Names="Verdana" Font-Size="Smaller" ForeColor="White" style="z-index: 1; position: absolute; top: 400px; left: 534px; width: 408px; height: 46px;" Text="Create an &nbsp;Account now and Register,&nbsp;&nbsp;&nbsp;No Verification Required!* 5 Letters For UserID and Password Requirement!" BackColor="#333333" BorderColor="Red" BorderStyle="Groove" BorderWidth="2px"></asp:Label>
 
-                            <asp:Label ID="Label2" runat="server" Font-Names="Verdana" Font-Size="Smaller" ForeColor="#3399FF" style="z-index: 1; position: absolute; top: 340px; left: 538px; width: 183px; height: 26px;" Text="UserID" Font-Bold="True"></asp:Label>
+                            <asp:Label ID="UserLabel2" runat="server" Font-Names="Verdana" Font-Size="Smaller" ForeColor="#3399FF" style="z-index: 1; position: absolute; top: 340px; left: 538px; width: 183px; height: 26px;" Text="UserID" Font-Bold="True"></asp:Label>
 
-                        <asp:Label ID="Label1" runat="server" Font-Names="Verdana" Font-Size="Smaller" ForeColor="White" style="z-index: 1; position: absolute; top: 339px; left: 737px; width: 139px; height: 28px; margin-left: 53px;" Text="Password" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="PaswordLabel1" runat="server" Font-Names="Verdana" Font-Size="Smaller" ForeColor="White" style="z-index: 1; position: absolute; top: 339px; left: 737px; width: 139px; height: 28px; margin-left: 53px;" Text="Password" Font-Bold="True"></asp:Label>
 
-                            <asp:Label ID="Label4" runat="server" Font-Names="Verdana" Font-Size="Small" ForeColor="#FF3300" style="z-index: 1; position: absolute; top: 243px; left: 4px; width: 1853px; height: 66px;" Text="Custom-Navigation For Whatever. else remove it ." BackColor="Black" CssClass="GridPager" Font-Bold="True" Font-Italic="True"></asp:Label>
+                            <asp:Label ID="TopStrapBarLabel4" runat="server" Font-Names="Verdana" Font-Size="Small" ForeColor="#FF3300" style="z-index: 1; position: absolute; top: 243px; left: 4px; width: 1853px; height: 66px;" Text="Custom-Navigation For Whatever. else remove it ." BackColor="Black" CssClass="GridPager" Font-Bold="True" Font-Italic="True"></asp:Label>
 
-                             <asp:TextBox ID="TextBox1" runat="server" Width="165px" BackColor="#0066CC" Height="27px" style="margin-left: 535px; margin-bottom: 32; margin-right: 0; margin-top: 48;" CssClass="SlideMenu13" Font-Names="Verdana" Font-Size="Medium" ForeColor="#FF9900" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" ToolTip="Your UserID Here!">UserID</asp:TextBox>    
+                             <asp:TextBox ID="User" runat="server" Width="165px" BackColor="#0066CC" Height="27px" style="margin-left: 535px; margin-bottom: 32; margin-right: 0; margin-top: 48;" CssClass="SlideMenu13" Font-Names="Verdana" Font-Size="Medium" ForeColor="#FF9900" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" ToolTip="Your UserID Here!">UserID</asp:TextBox>    
  
     
-            <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 4px; margin-top: 64px;" Width="165px" BackColor="#0066CC" CssClass="SlideMenu13" Height="27px" ToolTip="Password Here" Font-Size="Medium" ForeColor="#FF9900" Font-Names="Arial" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" TextMode="Password"></asp:TextBox>     
+            <asp:TextBox ID="Password" runat="server" style="margin-left: 4px; margin-top: 64px;" Width="165px" BackColor="#0066CC" CssClass="SlideMenu13" Height="27px" ToolTip="Password Here" Font-Size="Medium" ForeColor="#FF9900" Font-Names="Arial" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" TextMode="Password"></asp:TextBox>     
  
     
                              <asp:Button ID="Button1" runat="server" OnClick="ButtonRegister_Click" CssClass="auto-style6" Text="Register" Font-Bold="True" Font-Names="Verdana" ForeColor="Black" Height="27px" style="margin-left: 4px; margin-top: 8px;" Width="103px" BackColor="#336699" BorderColor="White" BorderStyle="Groove" BorderWidth="2px" ToolTip="Login to Member Panel After Registration!" />
