@@ -4,7 +4,7 @@
 
 Preview Of Frontpage and where your job begins.
 (member.aspx/.cs) and home/register.aspx/.cs are originally located in the folder /Pages and Panel is /Pages/Panel/Members.aspx and so on.  and Nav Links and global items are controlled via .Master Pages.
-
+ps. retrieve more accurate information from vsproject file, related to files locations and other information how the source files has been compiled in it's original state
 Good luck.
 
 # Gunz-Frontsite-Opensource
