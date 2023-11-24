@@ -1,4 +1,3 @@
-![previewimage](https://github.com/rockitmed162/Gunz-Frontsite-Opensource/assets/127537866/7526bb8a-8d47-461d-895c-956e185653a4)
 
 Preview Of Frontpage and where your job begins.
 (member.aspx/.cs) and home/register.aspx/.cs are originally located in the folder /Pages and Panel is /Pages/Panel/Members.aspx and so on.  and Nav Links and global items are controlled via .Master Pages.
