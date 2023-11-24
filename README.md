@@ -1,3 +1,4 @@
+https://user-images.githubusercontent.com/127537866/285503896-ebc27667-6b15-4951-80da-23c2df82affe.png
 
 Preview Of Frontpage and where your job begins.
 (member.aspx/.cs) and home/register.aspx/.cs are originally located in the folder /Pages and Panel is /Pages/Panel/Members.aspx and so on.  and Nav Links and global items are controlled via .Master Pages.
