@@ -254,6 +254,7 @@ namespace WebApplication12 {
 									int rowsAffecteds = Items.ExecuteNonQuery();
 									int rowsAffectede = Bounty.ExecuteNonQuery();
 
+									
 									if (rowsAffecteds > 0 && rowsAffectede > 0)
 									{
 
@@ -261,13 +262,11 @@ namespace WebApplication12 {
 										MessageBox.Show(string.Format("Item '{0}' Sent to '{1}' Item Costed '{2}'", itemid.Text, CharID.Text, price.Text));
 										string newUrl = "Members.aspx?id=" + Session["UserMember"];
 										Response.Redirect("https://localhost:44396/Pages/Panel/" + newUrl);
-										return;
 									}
 									else
 									{
 										transaction.Rollback();  // Rollback the transaction if any operation fails
 										MessageBox.Show("Item was not Sent");
-										return;
 									}
 								}
 							}
@@ -282,6 +281,7 @@ namespace WebApplication12 {
 				}
 			}
 		}
+
 		protected void ClanCreate_Click(object sender, EventArgs e)
 		{
 			string connectionString = "Data Source=jop\\mssqlserver02;Initial Catalog=GunzDB;Persist Security Info=True;User ID=sa;Password=Asdasd12!";
