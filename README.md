@@ -1,5 +1,6 @@
 ![nimetön](https://github.com/rockitmed162/Gunz-Frontsite-Opensource/assets/127537866/aec45a8f-15ed-475f-bb4f-61a09c5e865d)
 ![nimetön2](https://github.com/rockitmed162/Gunz-Frontsite-Opensource/assets/127537866/6bc2f097-1af5-41ed-ae27-d20717510b55)
+![nimetön2](https://github.com/rockitmed162/Gunz-Frontsite-Opensource/assets/127537866/f352c9ed-c1cc-4dfd-85c9-717bfae5be5d)
 
 
 Preview Of Frontpage and where your job begins.
