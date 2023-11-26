@@ -84,9 +84,9 @@ Download the Databases:
 GunzDB (whats different?)
 
 -
-
+patched no longer needed in gunzdb->
 In Account table you have a extra field "password" 
-
+<-
 -
 
 In Login You have extra field "UGradeID"
